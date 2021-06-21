@@ -1,0 +1,7 @@
+{
+    "env":{
+         "baseUrl" : "http://www.airmoldova.md/home-en/"
+    },
+    "testFiles": "**/*.{feature,features}"
+}
+
