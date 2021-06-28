@@ -1,8 +1,8 @@
 FROM cypress/base:10
 
-WORKDIR /cypress-presentation
+WORKDIR /root/cypress-presentation
 
-COPY cypress-presentation . 
+COPY . /root/cypress-presentation
 
 RUN npm install
 
