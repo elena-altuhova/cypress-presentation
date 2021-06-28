@@ -2,6 +2,7 @@
     "env":{
          "baseUrl" : "http://www.airmoldova.md/home-en/"
     },
-    "testFiles": "**/*.{feature,features}"
+    "testFiles": "**/*.{feature,features}",
+    "projectId": "q5y2uj"
 }
 
