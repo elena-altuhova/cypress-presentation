@@ -6,4 +6,6 @@ COPY . /root/cypress-presentation
 
 RUN npm install
 
-ENTRYPOINT [ "npx", "cypress", "run" ]
+ENV CYPRESS_RECORD_KEY='246a9982-9de8-429e-b85b-812f9da704ce'
+
+ENTRYPOINT [ "npx", "cypress", "run", "--record", "--key=${CYPRESS_RECORD_KEY}" ]
