@@ -2,10 +2,9 @@ FROM cypress/base:10
 
 WORKDIR /root/cypress-presentation
 
-COPY . /root/cypress-presentation
-
+COPY package.json /root/cypress-presentation/
 RUN npm install
 
-ENV CYPRESS_RECORD_KEY='246a9982-9de8-429e-b85b-812f9da704ce'
+COPY . /root/cypress-presentation
 
-ENTRYPOINT [ "npx", "cypress", "run", "--record", "--key=${CYPRESS_RECORD_KEY}" ]
+ENTRYPOINT [ "npx", "cypress", "run", "--record", "--key=246a9982-9de8-429e-b85b-812f9da704ce" ]
