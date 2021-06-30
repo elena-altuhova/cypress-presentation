@@ -23,7 +23,7 @@ class OnlineSchedule {
     }
 
     checkTomorrowSchedule(){
-        tomorrow.setDate(today.getDate() + 1);
+        tomorrow.setTime(today.getTime() + 86400000);
 
         cy.get('div[class = "table-schedule-body row day"]').eq(2)
             .should('have.text', 'Flight Schedule for tomorrow ' + this.formatDate(tomorrow));

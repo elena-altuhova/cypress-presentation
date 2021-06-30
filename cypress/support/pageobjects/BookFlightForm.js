@@ -16,7 +16,8 @@ class BookFlightForm {
     
         var depYear = departureDate.getFullYear();
         var depMonth = departureDate.getMonth();
-        this.iterateMonths((depMonth+12*depYear)-(todayMonth+12*todayYear));
+        tomorrow.setTime(today.getTime() + 86400000);
+        this.iterateMonths((depMonth+12*depYear)-(tomorrow.getMonth()+12*tomorrow.getFullYear()));
         this.validateSelectedYearAndMonth(departureDate);        
 
         cy.get('.ui-state-default').contains(departureDate.getDate()).click()
@@ -62,6 +63,7 @@ class BookFlightForm {
 
 }
 const today = new Date();
+var tomorrow = new Date();
 const todayYear = today.getFullYear();
 const todayMonth = today.getMonth();
 const options = { month: 'long'};
