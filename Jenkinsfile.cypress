@@ -10,7 +10,7 @@ pipeline{
         }
         stage("build image"){
             steps{
-                sh "docker build -t cypress_presentation:${env.GIT_REVISION[0..7]} ."
+                sh "docker build -t cypress_presentation:${env.GIT_COMMIT[0..7]} ."
             }
         }
     }
