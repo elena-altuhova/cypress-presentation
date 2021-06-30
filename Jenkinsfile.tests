@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage("run tests"){
             steps{
-                sh 'docker run cypress_presentation:1.0'
+                sh 'docker run cypress_presentation:4caa03e4'
             }
         }
     }
