@@ -10,7 +10,7 @@ pipeline{
         }
         stage("build image"){
             steps{
-                sh "docker build -t cypress_presentation:${env.GIT_COMMIT[0..7]} -v /vagrant/cypress:/root/cypress-presentation/cypress/videos ."
+                sh "docker build -t cypress_presentation:${env.GIT_COMMIT[0..7]} ."
             }
         }
     }
