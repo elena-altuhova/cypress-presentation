@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+
+    stages{
+        stage("SCM"){
+            steps {
+                cleanWs()
+                git branch: 'main', url: 'https://github.com/adrumov/cypress-presentation.git'
+            }
+        }
+        stage("build image"){
+            steps{
+                sh "docker build -t cypress_presentation:${env.GIT_COMMIT} ."
+            }
+        }
+    }
+}
