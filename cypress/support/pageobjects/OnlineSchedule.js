@@ -11,7 +11,7 @@ class OnlineSchedule {
     }
 
     checkYesterdaySchedule(){
-        yesterday.setDate(today.getDate() - 1);
+        yesterday.setTime(today.getTime() - 86400000);
         
         cy.get('div[class = "table-schedule-body row day"]').first()
             .should('have.text', 'Flight Schedule for yesterday ' + this.formatDate(yesterday));
